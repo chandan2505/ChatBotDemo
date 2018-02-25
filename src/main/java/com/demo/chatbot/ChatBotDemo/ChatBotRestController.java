@@ -13,8 +13,8 @@ public class ChatBotRestController {
 	@RequestMapping(value = "/bot/calculatePrem", method = RequestMethod.POST)
 	public Fulfillment calculatePremium(AIRequest request) {
 		 System.out.println("In Test one Method");
-		 System.out.println( "VALUE::::"+request.getEntities().get(0).getEntries().get(0).getValue());
-		 System.out.println( "NAME::::"+request.getEntities().get(0).getName());
+		 System.out.println( "request::::"+request+"::::String"+request.toString());
+				 System.out.println( "getEntities::::"+request.getEntities().size());
 		    Fulfillment fulfillment = new Fulfillment();
 		    
 		    fulfillment.setDisplayText("welcome from java");
