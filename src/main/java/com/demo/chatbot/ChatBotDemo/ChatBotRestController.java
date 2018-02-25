@@ -11,9 +11,12 @@ import ai.api.model.Fulfillment;
 public class ChatBotRestController {
 
 	@RequestMapping(value = "/bot/calculatePrem", method = RequestMethod.POST)
-	public Fulfillment calculatePremium(AIRequest loan) {
+	public Fulfillment calculatePremium(AIRequest request) {
 		 System.out.println("In Test one Method");
+		 System.out.println( "VALUE::::"+request.getEntities().get(0).getEntries().get(0).getValue());
+		 System.out.println( "NAME::::"+request.getEntities().get(0).getName());
 		    Fulfillment fulfillment = new Fulfillment();
+		    
 		    fulfillment.setDisplayText("welcome from java");
 		    fulfillment.setSpeech("Your Loan is 2000 AUD");
 
