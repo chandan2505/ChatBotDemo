@@ -13,7 +13,7 @@ public class ChatBotRestController {
 	@RequestMapping(value = "/bot/calculatePrem", method = RequestMethod.POST)
 	public Fulfillment calculatePremium(AIOriginalRequest request) {
 
-		System.out.println("Request::::" + request.toString());
+		System.out.println("Request:::" + request.toString());
 		Fulfillment fulfillment = new Fulfillment();
 
 		fulfillment.setDisplayText("welcome from java");
