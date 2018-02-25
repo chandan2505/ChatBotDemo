@@ -1,19 +1,19 @@
 package com.demo.chatbot.ChatBotDemo;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import ai.api.model.AIOriginalRequest;
 import ai.api.model.Fulfillment;
 
 @RestController
 public class ChatBotRestController {
 
 	@RequestMapping(value = "/bot/calculatePrem", method = RequestMethod.POST)
-	public Fulfillment calculatePremium(AIOriginalRequest request) {
+	public Fulfillment calculatePremium(@RequestBody String request) {
 
-		System.out.println("Request:::" + request.toString());
+		System.out.println("Request:::" + request);
 		Fulfillment fulfillment = new Fulfillment();
 
 		fulfillment.setDisplayText("welcome from java");
