@@ -29,11 +29,11 @@ public class ChatBotRestController {
 		String prprtyVal = (String) ((Map<String, Object>) ((Map<String, Object>) map.get("result")).get("parameters"))
 				.get("propertyValue");
 		System.out.println(prprtyVal);
-		if (prprtyVal.equalsIgnoreCase("5000000")) {
+		if (prprtyVal.equalsIgnoreCase("500000")) {
 			fulfillment.setSpeech("Your Loan is 2000 AUD");
-		} else if (prprtyVal.equalsIgnoreCase("7000000")) {
+		} else if (prprtyVal.equalsIgnoreCase("700000")) {
 			fulfillment.setSpeech("Your Loan is 3000 AUD");
-		} else if (prprtyVal.equalsIgnoreCase("9000000")) {
+		} else if (prprtyVal.equalsIgnoreCase("900000")) {
 			fulfillment.setSpeech("Your Loan is 4000 AUD");
 		}
 		System.out.println("Response::::" + fulfillment.toString());
