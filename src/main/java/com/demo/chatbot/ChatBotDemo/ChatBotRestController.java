@@ -29,12 +29,26 @@ public class ChatBotRestController {
 		String prprtyVal = (String) ((Map<String, Object>) ((Map<String, Object>) map.get("result")).get("parameters"))
 				.get("propertyValue");
 		System.out.println(prprtyVal);
-		if (prprtyVal.equalsIgnoreCase("500000")) {
-			fulfillment.setSpeech("Your Loan is 2000 AUD");
-		} else if (prprtyVal.equalsIgnoreCase("700000")) {
-			fulfillment.setSpeech("Your Loan is 3000 AUD");
-		} else if (prprtyVal.equalsIgnoreCase("900000")) {
-			fulfillment.setSpeech("Your Loan is 4000 AUD");
+		if (prprtyVal.equalsIgnoreCase("100000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,200.00 excluding stamp duty.");
+		} else if (prprtyVal.equalsIgnoreCase("200000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,200.00 excluding stamp duty.");
+		} else if (prprtyVal.equalsIgnoreCase("300000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,725.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("400000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,200.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("500000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,915.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("600000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,915.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("700000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $1,915.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("800000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $3,845.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("900000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $3,845.00 excluding stamp duty.");
+		}else if (prprtyVal.equalsIgnoreCase("1000000")) {
+			fulfillment.setSpeech("Your estimated premium payable LMI(including GST) is $3,845.00 excluding stamp duty.");
 		}
 		System.out.println("Response::::" + fulfillment.toString());
 		return fulfillment;
